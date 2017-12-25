@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Laboratorio 1 - CCW</title>
+	<!-- Compiled and minified CSS -->
+	<!-- CDN CSS del Framework Front-end Materialize CSS-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<!-- CDN JS del Framework Front-end Materialize JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	
+
+</head>
+<body>
+
+	<div class="slider">
+		<ul class="slides">
+			<li>
+				<img src="https://lorempixel.com/580/250/nature/1" id="image0"> <!-- random image -->
+				<div class="caption left-align">
+					<h3>Chuck Norris</h3>
+					<h5 class="light grey-text text-lighten-3" id="chiste0">Here's our small slogan.</h5>
+				</div>
+			</li>
+			<li>
+				<img src="https://lorempixel.com/580/250/nature/2" id="image1"> <!-- random image -->
+				<div class="caption left-align">
+					<h3>Chuck Norris</h3>
+					<h5 class="light grey-text text-lighten-3" id="chiste1">Here's our small slogan.</h5>
+				</div>
+			</li>
+			<li>
+				<img src="https://lorempixel.com/580/250/nature/3" id="image2"> <!-- random image -->
+				<div class="caption left-align">
+					<h3>Chuck Norris</h3>
+					<h5 class="light grey-text text-lighten-3" id="chiste2">Here's our small slogan.</h5>
+				</div>
+			</li>
+			<li>
+				<img src="https://lorempixel.com/580/250/nature/4" id="image3"> <!-- random image -->
+				<div class="caption left-align">
+					<h3>Chuck Norris</h3>
+					<h5 class="light grey-text text-lighten-3" id="chiste3">Here's our small slogan.</h5>
+				</div>
+			</li>
+			<li>
+				<img src="https://lorempixel.com/580/250/nature/4" id="image4"> <!-- random image -->
+				<div class="caption left-align">
+					<h3>Chuck Norris</h3>
+					<h5 class="light grey-text text-lighten-3" id="chiste4">Here's our small slogan.</h5>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		//array de imágenes que se mostrarán en el slider tomadas de Google Images
+		var arrayImagenes = new Array(5);
+		arrayImagenes[0] = "http://republica.gt/wp-content/uploads/2017/08/Vd3MJo.jpg"; 
+		arrayImagenes[1] = "https://ep01.epimg.net/elpais/imagenes/2017/08/25/gente/1503673912_542948_1503674193_noticia_normal.jpg"; 
+		arrayImagenes[2] = "https://cdn2.i-scmp.com/sites/default/files/images/methode/2017/08/22/9c763458-8254-11e7-a767-bc310e55dd10_1320x770_111120.jpg"; 
+		arrayImagenes[3] = "http://estaticos.elperiodico.com/resources/jpg/9/9/1503685483899.jpg"; 
+		arrayImagenes[4] = "https://media.gettyimages.com/photos/actors-arnold-schwarzenegger-chuck-norris-and-randy-couture-arrive-at-picture-id150335630?s=612x612"; 		
+
+		//petición AJAX con javascript nativo
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.open('GET', 'http://api.icndb.com/jokes/random/5', true);
+		xmlhttp.onreadystatechange = function(){
+			var textoChiste = JSON.parse(this.response).value;
+			console.log('chistes recibido: ' + textoChiste.length);
+			var contenedor = document.getElementsByClassName("slides");
+			for (var i = 0; i < textoChiste.length; i++) {
+				document.getElementById("image"+i).removeAttribute('src'); //elimino el atributo src de la imagen recorrida
+				document.getElementById("image"+i).setAttribute('src',arrayImagenes[i]);//añado atributo src con valor de la imagen del array
+				document.getElementById("chiste"+i).innerHTML = textoChiste[i].joke; //escribo el chiste correspondiente
+				console.log(textoChiste[i].joke);//imprimo por consola el chiste escrito en el html
+			}			
+		}
+		xmlhttp.send();
+
+		//funciones adicionales para que funcione el slider
+		$(document).ready(function(){
+			$('.slider').slider();
+			// Pause slider
+			$('.slider').slider('pause');
+			// Start slider
+			$('.slider').slider('start');
+			// Next slide
+			$('.slider').slider('next');
+			// Previous slide
+			$('.slider').slider('prev');
+			//$('.slider').height(400);
+		});
+
+	</script>
+</body>
+</html>
