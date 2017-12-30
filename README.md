@@ -61,7 +61,7 @@ xmlhttp.onreadystatechange = function(){
 xmlhttp.send();
 ```
 
-El código de esta página se observa en el siguiente [enlace](https://gitlab.com/cxvo1993/laboratorio1_CCW/blob/master/1_javascript_ajax.html). El resultado del mismo se muestra en el siguiente [enlace](http://investigacion.utmachala.edu.ec/laboratorio_CCW/1_javascript_ajax.html).
+El código de esta página se observa en el siguiente [enlace](https://github.com/carxav1993/laboratorio_CCW/blob/master/1_javascript_ajax.html). El resultado del mismo se muestra en el siguiente [enlace](http://investigacion.utmachala.edu.ec/laboratorio_CCW/1_javascript_ajax.html).
 
 > Para complementar el código javascript nativo implementado para efectuar el primer apartado, sirvió de apoyo la página de la [W3School - Js](https://www.w3schools.com/js/).
 
@@ -84,7 +84,7 @@ $.get("http://api.icndb.com/jokes/random/5", (response) => {
 	}
 });
 ```
-El resultado es el mismo, solo que en código se puede observar notablemente la reducción de este mediante el uso de jQuery a través de este [enlace](https://gitlab.com/cxvo1993/laboratorio1_CCW/blob/master/2_jquery_ajax.html), además del resultado de este apartado se muestra en el siguiente [enlace](http://investigacion.utmachala.edu.ec/laboratorio_CCW/2_jquery_ajax.html).
+El resultado es el mismo, solo que en código se puede observar notablemente la reducción de este mediante el uso de jQuery a través de este [enlace](https://github.com/carxav1993/laboratorio_CCW/blob/master/2_jquery_ajax.html), además del resultado de este apartado se muestra en el siguiente [enlace](http://investigacion.utmachala.edu.ec/laboratorio_CCW/2_jquery_ajax.html).
 
 > Para complementar el código jQuery implementado para efectuar este apartado, sirvió de apoyo el sitio oficial de jQuery, específicamente la manipulación del [DOM](http://api.jquery.com/category/manipulation/).
 
@@ -110,7 +110,7 @@ $.icndb.getRandomJokes({
     }
 });
 ```
-El resultado es el mismo, solo que en código se puede observar notablemente la reducción de este mediante el uso del plugin jQuery como se observa en este [enlace](https://gitlab.com/cxvo1993/laboratorio1_CCW/blob/master/3_jquery_plugin_ajax.html), y resultado en el siguiente [enlace](http://investigacion.utmachala.edu.ec/laboratorio_CCW/3_jquery_plugin_ajax.html).
+El resultado es el mismo, solo que en código se puede observar notablemente la reducción de este mediante el uso del plugin jQuery como se observa en este [enlace](https://github.com/carxav1993/laboratorio_CCW/blob/master/3_jquery_plugin_ajax.html), y resultado en el siguiente [enlace](http://investigacion.utmachala.edu.ec/laboratorio_CCW/3_jquery_plugin_ajax.html).
 
 > Para complementar el código jQuery implementado para efectuar este apartado, sirvió de apoyo el sitio oficial de jQuery, específicamente la manipulación del [DOM](http://api.jquery.com/category/manipulation/).
 
@@ -123,7 +123,7 @@ _____
 3. Posteriormente se añade en la cabecera del documento HTML una etiqueta `<link>` y en el atributo ***rel*** se escribe ***"import"*** además del ***href*** que debe estar vinculado el enlace donde se tomará referencia el web component, quedando de la siguiente manera: `<link rel="import" href="https://raw.githubusercontent.com/erikringsmuth/chuck-norris-joke/master/chuck-norris-joke.html">`.
 4. Para la obtención de la información únicamente se debe indicar las etiquetas `<chuck-norris-joke></chuck-norris-joke>`.
 
-El resultado es el mismo, aunque en código queda muy simplificado a una única linea de etiqueta del html, como se muestra en el siguiente [enlace](https://gitlab.com/cxvo1993/laboratorio1_CCW/blob/master/4_web_components.html) y resultado en el navegador en este [enlace](http://investigacion.utmachala.edu.ec/laboratorio_CCW/4_web_components.html).
+El resultado es el mismo, aunque en código queda muy simplificado a una única linea de etiqueta del html, como se muestra en el siguiente [enlace](https://github.com/carxav1993/laboratorio_CCW/blob/master/4_web_components.html) y resultado en el navegador en este [enlace](http://investigacion.utmachala.edu.ec/laboratorio_CCW/4_web_components.html).
 
 > Mayor información de los web components, sírvase revisar el siguiente [enlace](https://www.webcomponents.org/).
 
